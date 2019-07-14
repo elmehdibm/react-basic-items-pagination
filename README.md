@@ -8,9 +8,7 @@ Now it's possible in an easy way to create a set of items and costumize them acc
 Click me to see a demonstration ✋ !
 <br>
 Let's Begin  😎 !
-<br><br>
-![](.\ressources\Jim-Carrey-clavier.gif)
-
+<br>
 ## Getting Started
 ------
 It's simple whether you are a newbie or expert with React, just by following the instructions below you'll be able to use this library and do this cool stuff !
@@ -18,10 +16,6 @@ It's simple whether you are a newbie or expert with React, just by following the
 <br> • Full style customization ✂️
 <br> • Place it anywhere in your code, it'll work 🎯
 <br> • All Browsers(IE, Firefox, Chrome ...) Support 🚀
-<br>
-Take a Look of the result of this awesome component helper ! ( *I've choosed the pictures below to illustrate my example because I'm an anime lover*  🤣  🤣  🤣  ) 
-<br>
-![](.\ressources\mini-demo.gif)
 
 ###  •  Prerequisites
 Since you are working with react, it's fine you'll not need to install any other dependancy, 'React >= 16.0' is the only dependancy of this helper 🤗.
@@ -96,9 +90,6 @@ import PirateKings from `${your-path}/img/Pirate-Kings.jpg`;
     }
   ];
 ```
-The output result :
-<br><br>
-![](.\ressources\screen-1.png)
 ## More Costumizing 
 ------
 You'll notice that the Example above need to be more stylish !
@@ -143,9 +134,6 @@ Let's add some shadowing and spacing and see the results !
         }
     }
 ````
-The output result :
-<br>
-![](.\ressources\screen-2.PNG)
 ## Authors
 -------
 * **Boumhicha El Mehdi** - *Initial work* - [Elmehdibm](https://github.com/elmehdibm/)
