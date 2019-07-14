@@ -6,7 +6,7 @@ import InfoContent from "./components/InfoContent";
 import cubeStyle from "./styles/cubeStyle";
 
 import buildData from "./flow/buildData";
-import {checkProp, handleErrors} from "./flow/helpers";
+import {checkProp, handleErrors, comparePropsHolders} from "./flow/helpers";
 
 class GlobalComponent extends Component {
     constructor(props){
@@ -14,6 +14,10 @@ class GlobalComponent extends Component {
         this.state = {
             "currentPage": 0
         };
+    }
+
+    shouldComponentUpdate(nextProps, nextState){
+        return comparePropsHolders(nextProps, this.props);
     }
 
     render(){

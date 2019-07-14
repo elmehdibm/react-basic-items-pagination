@@ -48,7 +48,7 @@ const InfoContent = (
             className={classname+"__children"}
             style={Object.assign({}, childrenStyle, commonContentStyle)}            
         >
-            {children}
+            {children(inbuiltData[itemSignature + index])}
         </div>
     </div>);
 };

@@ -1,0 +1,23 @@
+{
+  "name": "react-basic-items-pagination",
+  "version": "1.1.0",
+  "description": "It's a compoent helper for rendering set of items and manage the interaction with them",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elmehdibm/react-basic-items-pagination.git"
+  },
+  "keywords": [
+    "pagination",
+    "items"
+  ],
+  "author": "ElMehdibm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elmehdibm/react-basic-items-pagination/issues"
+  },
+  "homepage": "https://github.com/elmehdibm/react-basic-items-pagination#readme"
+}
