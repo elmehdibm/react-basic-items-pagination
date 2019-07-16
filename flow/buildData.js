@@ -1,7 +1,7 @@
 import Item from "../prototypes/Item";
 import {handleDataErrors} from "../flow/helpers";
- 
-const buildData = (signature: string, data: any, withImage: boolean) => {
+
+const buildData = (signature, data, withImage) => {
     let inbuiltData = {};
     if(data){
         data.forEach((elem, index) => {

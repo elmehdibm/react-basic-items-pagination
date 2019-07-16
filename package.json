@@ -4,6 +4,7 @@
   "description": "It's a compoent helper for rendering set of items and manage the interaction with them",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config ./webpack.config.js  --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,16 @@
   "bugs": {
     "url": "https://github.com/elmehdibm/react-basic-items-pagination/issues"
   },
-  "homepage": "https://github.com/elmehdibm/react-basic-items-pagination#readme"
+  "homepage": "https://github.com/elmehdibm/react-basic-items-pagination#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "webpack": "^4.25.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "webpack-cli": "^3.1.2"
+  }
 }
