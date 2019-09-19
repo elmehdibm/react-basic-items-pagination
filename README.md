@@ -1,6 +1,6 @@
 # React Basic Items Pagination
 
-> A LightWeight component helper in React developement
+> A LightWeight component helper
 
 The appearance of Items is a common thing in WebSites, you can't find any E-commerce website without a list of articles to purchase, if you know the importance of this then take a look at this helper.<br>
 Now it's possible in an easy way to create a set of items and costumize them according to your website  😁 , you have a project or work inside an organization , you want to save time or help your team , you can use this free helper to create an awesome set of items in less than one minute !
