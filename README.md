@@ -9,7 +9,7 @@ Click me to see a demonstration ✋ !
 <br>
 Let's Begin  😎 !
 <br><br>
-![Jim-Carrey](https://drive.google.com/uc?export=view&id=1vAlMWgpf4lJ6GWr6bIaIPW4QRlxB9SVH)
+![image](https://drive.google.com/uc?export=view&id=1vAlMWgpf4lJ6GWr6bIaIPW4QRlxB9SVH)
 
 ## Getting Started
 ------
@@ -21,7 +21,7 @@ It's simple whether you are a newbie or expert with React, just by following the
 <br>
 Take a Look of the result of this awesome component helper ! ( *I've choosed the pictures below to illustrate my example because I'm an anime lover*  🤣  🤣  🤣  ) 
 <br>
-![Mini-Demo](https://drive.google.com/uc?export=view&id=1ASBZVBkM7DKAcPz-xEVgEo0QQbHxvsM8)
+![image](https://drive.google.com/uc?export=view&id=1ASBZVBkM7DKAcPz-xEVgEo0QQbHxvsM8)
 
 ###  •  Prerequisites
 Since you are working with react, it's fine you'll not need to install any other dependancy, 'React >= 16.0' is the only dependancy of this helper 🤗.
@@ -98,7 +98,7 @@ import PirateKings from `${your-path}/img/Pirate-Kings.jpg`;
 ```
 The output result :
 <br><br>
-![screen-1](https://drive.google.com/uc?export=view&id=1fw1llhEseuTqODh9wIvbnIvgp2fSh6M7)
+![image](https://drive.google.com/uc?export=view&id=1fw1llhEseuTqODh9wIvbnIvgp2fSh6M7)
 ## More Costumizing 
 ------
 You'll notice that the Example above need to be more stylish !
@@ -145,7 +145,7 @@ Let's add some shadowing and spacing and see the results !
 ````
 The output result :
 <br>
-![screen-2](https://drive.google.com/uc?export=view&id=1AxfQa1LZBbjamvVj7PIrtvGRzRnf5cqC)
+![image](https://drive.google.com/uc?export=view&id=1AxfQa1LZBbjamvVj7PIrtvGRzRnf5cqC)
 ## Authors
 -------
 * **Boumhicha El Mehdi** - *Initial work* - [Elmehdibm](https://github.com/elmehdibm/)
