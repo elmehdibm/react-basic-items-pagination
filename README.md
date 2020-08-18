@@ -5,21 +5,72 @@
 The appearance of Items is a common thing in WebSites, you can't find any E-commerce website without a list of articles to purchase, if you know the importance of this then take a look at this helper.<br>
 Now it's possible in an easy way to create a set of items and costumize them according to your website  😁 , you have a project or work inside an organization , you want to save time or help your team , you can use this free helper to create an awesome set of items in less than one minute !
 <br>
-Click me to see a demonstration ✋ !
+[Click me to see a demonstration ✋ !](https://demo-react-basic-items-pagination.netlify.com/)
 <br>
 Let's Begin  😎 !
 <br>
-## Getting Started
+![image](https://drive.google.com/uc?export=view&id=1vAlMWgpf4lJ6GWr6bIaIPW4QRlxB9SVH)
+## Table of Contents 
+---
+<div style="font-size:18px"> <a style="color: currentColor" href="#intro"> ➡️  Introduction </a> </div>
+<ul>
+    <a style="color: currentColor" href="#specs"><li>Specifications</li></a>
+    <a style="color: currentColor" href="#features"><li>Actual & Upcoming Features</li></a>
+</ul>
+<div style="font-size:18px"> <a  style="color: currentColor" href="#start"> ➡️  Getting Started </a></div>
+<ul><a style="color:currentColor" href="#prerequisites"><li>Prequisities</li></a></ul>
+<ul><a style="color:currentColor" href="#install"><li>Installing</li></a></ul>
+<ul><a style="color:currentColor" href="#example"><li>Example</li></a></ul>
+<ul><a style="color:currentColor" href="#custom"><li>More costumizing</li></a></ul>
+<div style="font-size:18px"><a style="color:currentColor" href="#author"> ➡️  Authors </a></div>
+<div style="font-size:18px"><a style="color:currentColor" href="#licence"> ➡️  Licence </a></div>
+
+<div id="intro">
+
+## Introduction
 ------
-It's simple whether you are a newbie or expert with React, just by following the instructions below you'll be able to use this library and do this cool stuff !
-<br> • Easy to use 😉
+
+Take a Look of the result of this awesome component helper ! ( *I've choosed the pictures below to illustrate my example because I'm an anime lover*  🤣  🤣  🤣  ) 
+<br>
+![image](https://drive.google.com/uc?export=view&id=1ASBZVBkM7DKAcPz-xEVgEo0QQbHxvsM8)
+
+<div id="specs">
+
+### ► Specifications :
+• Easy to use 😉
 <br> • Full style customization ✂️
 <br> • Place it anywhere in your code, it'll work 🎯
 <br> • All Browsers(IE, Firefox, Chrome ...) Support 🚀
 
-###  •  Prerequisites
+</div>
+<div id ="features">
+
+###  ►  Actual & Upcoming Features :
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☑️ Rendering Responsively the set of Items<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☑️ Full Overriding Styles of Elements<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⏹️ Multiple Displaying Modes (Choosing title/image positions)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⏹️ Supporting Fetching data by a given url <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⏹️ Pagination & Lazy loading on fetching data <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⏹️ Supporting Items that display media (video, gifs ...) <br>
+
+</div>
+</div>
+<div id="start">
+
+## Getting Started
+------
+It's simple whether you are a newbie or expert with React, just by following the instructions below you'll be able to use this library and do this cool stuff !
+<div id="prerequisites">
+
+###  ►  Prerequisites
+</div>
+
 Since you are working with react, it's fine you'll not need to install any other dependancy, 'React >= 16.0' is the only dependancy of this helper 🤗.
-###  •  Installing
+<div id="install">
+
+###  ►  Installing
+</div>
+
 This package is available in npm repository as react-basic-items-pagination.
 `````
 npm install react-basic-items-pagination --save
@@ -32,8 +83,12 @@ Now wherever you want in your project, you can import it
 `````
 import BasicItemsPagination from 'react-basic-items-pagination';
 `````
+<div id="example">
+
+###  ►  Example
+</div>
+
 *It's so simple ;) , now it's ready to use just by calling the tag of BasicItemsPagination ; For more clarification ↓↓↓ check the example below ↓↓↓*
-###  •  Example
 The sample code :
 ```
 <BasicItemsPagination
@@ -90,8 +145,14 @@ import PirateKings from `${your-path}/img/Pirate-Kings.jpg`;
     }
   ];
 ```
-## More Costumizing 
-------
+The output result :
+<br><br>
+![image](https://drive.google.com/uc?export=view&id=1fw1llhEseuTqODh9wIvbnIvgp2fSh6M7)
+
+<div id="custom">
+
+### ► More Costumizing 
+</div>
 You'll notice that the Example above need to be more stylish !
 <br>
 Don't worry, you can add a costum css styles in each composant in our set of items.
@@ -134,11 +195,25 @@ Let's add some shadowing and spacing and see the results !
         }
     }
 ````
+The output result :
+<br>
+![image](https://drive.google.com/uc?export=view&id=1AxfQa1LZBbjamvVj7PIrtvGRzRnf5cqC)
+
+</div>
+<div id="author">
+
 ## Authors
+</div>
+
 -------
 * **Boumhicha El Mehdi** - *Initial work* - [Elmehdibm](https://github.com/elmehdibm/)
 <br>
 (*Dear developers you're welcome to contribute in this work or just try this solution and leave some comments or maybe some stars to make the helper more available to everyone * 🙏)
+
+<div id="licence">
+
 ## License
+</div>
+
 --------
 This project is licensed under the MIT License - see the [LICENSE.md](.\LICENSE.md) file for details
