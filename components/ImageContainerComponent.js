@@ -1,18 +1,37 @@
 import React from 'react';
 
-import {
-    imageContainer,
-    imageContent,
-} from '../styles/constants';
-
 export default React.memo((
     {
         item,
+        containerImageProps,
+        imageProps,
+        classNameImageContainer,
+        classNameImageContent,
     }
 ) => {
     console.log("Rendering Image Container " + item.id);
     return (
-    <div className={imageContainer}>
-        <img className={imageContent} src={item.image} />
-    </div>
-)});
+        <div
+            className={classNameImageContainer}
+            {
+            ...Object.assign(
+                item.containerImageProps(item), (containerImageProps && containerImageProps(item)) || {}
+            )
+            }
+        >
+            {(item.image && !item.imageContent) &&
+                <img
+                    {
+                    ...Object.assign(
+                        item.imageProps(item), (imageProps && imageProps(item)) || {}
+                    )
+                    }
+                    loading="lazy"
+                    className={classNameImageContent}
+                    src={item.image}
+                />
+            }
+            {item.imageContent}
+        </div>
+    )
+});

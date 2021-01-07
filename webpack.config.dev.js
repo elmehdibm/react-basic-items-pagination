@@ -13,10 +13,12 @@ module.exports = {
             }
         ]
       },
+    // Use externals to exclude libraries
+    externals: ['react'],
     output: {
-        path: __dirname + '/react-basic-items-pagination',
+        path: __dirname + '/react-basic-items-pagination/dist',
         publicPath: '/',
-        filename: 'index.js',
+        filename: 'react-basic-items-pagination.dev.js',
         libraryTarget: 'commonjs2'
     }
 };

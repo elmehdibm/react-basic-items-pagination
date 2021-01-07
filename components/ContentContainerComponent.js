@@ -1,23 +1,28 @@
 import React from 'react';
 
-import {
-    contentContainer,
-    childrenContentContainer,
-} from '../styles/constants';
-
 export default React.memo((
     {
         item,
         childrenContent,
+        classNameContent,
+        classNameChildrenContent,
+        contentProps,
     }
 ) => {
     console.log("Rendering Content Component " + item.id);
     return (
-        <div className={contentContainer}>
+        <div
+            className={classNameContent}
+            {
+            ...Object.assign(
+                item.contentProps(item), (contentProps && contentProps(item)) || {}
+            )
+            }
+        >
             {item.description}
             {
-                childrenContent && <div className={childrenContentContainer}>
-                    {childrenContent(item)}
+                (item.content || childrenContent) && <div className={classNameChildrenContent}>
+                    {item.content || childrenContent(item)}
                 </div>
             }
         </div>

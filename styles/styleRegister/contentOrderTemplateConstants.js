@@ -17,6 +17,27 @@ export const contentOrderTitleDownImageLeftTemplate = {
         },
     },
 };
+// This style is added on 02/01/2020
+export const contentOrderTitleLeftUpImageLeftTemplate = {
+    row1: {
+        col1: {
+            row1: 'title',
+            row2: 'image',
+        },
+        col2: 'content',
+    },
+};
+export const contentOrderTitleLeftDownImageLeftTemplate = {
+    row1: {
+        col1: {
+            row1: 'image',
+            row2: 'title',
+        },
+        col2: 'content',
+    },
+};
+// Haha I did forget about this case fortunately it's scalable
+
 export const contentOrderNoTitleImageLeftTemplate = {
     row1: {
         col1: 'image',
@@ -60,6 +81,26 @@ export const contentOrderTitleDownContentLeftTemplate = {
         },
     },
 };
+// This style is added on 02/01/2020
+export const contentOrderTitleLeftUpContentLeftTemplate = {
+    row1: {
+        col1: {
+            row1: 'title',
+            row2: 'content',
+        },
+        col2: 'image',
+    },
+};
+export const contentOrderTitleLeftDownContentLeftTemplate = {
+    row1: {
+        col1: {
+            row1: 'content',
+            row2: 'title',
+        },
+        col2: 'image',
+    },
+};
+// Haha I did forget about this case fortunately it's scalable
 export const contentOrderNoTitleContentLeftTemplate = {
     row1: {
         col1: 'content',

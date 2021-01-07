@@ -1,17 +1,8 @@
 import { handleContentOrderTemplateErrors, handleClassNamesErrors, handleStyleErrors } from "../flow/helpers";
 
-import { changeCssProperty, cx } from "../libs/styledComponent";
+import { addMediaQuery, changeCssProperty } from "../libs/styledComponent";
 import {
-    boxesContainer,
-    boxContainer,
-    imageContainer,
-    infoContainer,
-    descriptionContainer,
-    contentContainer,
-    titleContainer,
-    imageContent,
-    childrenContentContainer,
-    childrenTitleContainer,
+    MapClasseNames,
 } from './constants';
 import styleRegister from "./styleRegister";
 
@@ -39,6 +30,8 @@ export default (
     titleContainerPadding,
     contentContainerPadding,
     styles,
+    templateLeftFilters,
+    templateRightFilters,
 ) => {
     console.log("Managing the contentOrderTemplate ...");
 
@@ -60,7 +53,7 @@ export default (
     // Handling the holder of boxes
     if (alignItems) {
         changeCssProperty(
-            boxesContainer,
+            MapClasseNames.boxesContainer,
             {
                 justifyContent: alignItems,
             }
@@ -73,7 +66,7 @@ export default (
     if (flexRow) {
         let valueToSubstract = horizontalSpacing ? (2 * horizontalSpacing) : 0;
         changeCssProperty(
-            boxContainer,
+            MapClasseNames.boxContainer,
             {
                 minWidth: `${(minWidthItem - valueToSubstract - borderValueToSubstract)}px`,
                 maxWidth: `${(maxWidthItem - valueToSubstract - borderValueToSubstract)}px`,
@@ -86,7 +79,7 @@ export default (
         }
         const calculatedWidth = `calc(${itemsPerRowValue} - ${borderValueToSubstract}px - ${horizontalSpacing ? (horizontalSpacing * 2) : 0}px)`;
         changeCssProperty(
-            boxContainer,
+            MapClasseNames.boxContainer,
             {
                 width: calculatedWidth,
             }
@@ -98,21 +91,21 @@ export default (
     // Must add border Props for ( title , box , content , image)
 
     changeCssProperty(
-        boxContainer,
+        MapClasseNames.boxContainer,
         {
             margin: `${verticalSpacing ? verticalSpacing : 0} ${horizontalSpacing ? horizontalSpacing : 0}`,
             borderWidth: borderWidth ? (borderWidth + 'px') : '2px',
+            height: (height && flexRow) ? `${height}px` : 'auto',
             ...styleRegisterValue.boxContainerStyle({
-                height: height ? (height + 'px') : '1fr',
                 titleContainerHeight: (titleContainerHeight) ? (titleContainerHeight + 'px') : 'auto',
                 imageContainerRate: imageContainerRate ? (imageContainerRate + '%') : '1fr',
-                contentContainerRate: contentContainerRate ? (contentContainerRate + '%') : '1fr',            
+                contentContainerRate: contentContainerRate ? (contentContainerRate + '%') : '1fr',
             }),
         },
     );
 
     changeCssProperty(
-        titleContainer,
+        MapClasseNames.titleContainer,
         {
             justifyContent: titleContainerJustifyContent ? titleContainerJustifyContent : 'center',
             alignItems: titleContainerAlignItems ? titleContainerAlignItems : 'center',
@@ -124,7 +117,7 @@ export default (
     );
 
     changeCssProperty(
-        imageContainer,
+        MapClasseNames.imageContainer,
         {
             height: (height && !flexRow) ? height : '100%',
             ...styleRegisterValue.imageContainerStyle({
@@ -134,7 +127,7 @@ export default (
     );
 
     changeCssProperty(
-        contentContainer,
+        MapClasseNames.contentContainer,
         {
             padding: contentContainerPadding || '2px',
             ...styleRegisterValue.contentContainerStyle({
@@ -144,12 +137,47 @@ export default (
     );
 
     changeCssProperty(
-        imageContent,
+        MapClasseNames.imageContent,
         {
             width: imageWidthRate ? (imageWidthRate + '%') : '100%',
             height: imageHeightRate ? (imageHeightRate + '%') : '100%',
         }
     );
+
+
+    // Management of left & right
+    if (templateLeftFilters) {
+        changeCssProperty(
+            MapClasseNames.paginationContainer,
+            {
+                "gridColumn": "2",
+            }
+        );
+    }
+    if (templateLeftFilters && templateRightFilters) {
+        changeCssProperty(
+            MapClasseNames.container,
+            {
+                "gridTemplateColumns": "20% 1fr 20%",
+            }
+        );
+    }
+    if (templateLeftFilters && !templateRightFilters) {
+        changeCssProperty(
+            MapClasseNames.container,
+            {
+                "gridTemplateColumns": "30% 1fr",
+            }
+        );
+    }
+    if (templateRightFilters && !templateLeftFilters) {
+        changeCssProperty(
+            MapClasseNames.container,
+            {
+                "gridTemplateColumns": "1fr 30%",
+            }
+        );
+    }
 
     return styleRegisterValue.elements;
 };

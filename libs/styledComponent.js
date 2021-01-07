@@ -43,7 +43,18 @@ const transformStylesToCssRules = (styles) => {
 	return cssRules;
 };
 
-const styleSheetId = "emui-style-id-" + Math.floor(Math.random().toFixed(5) * 10000);
+const transformMediaStylesToCssRules = (styles) => {
+	const cssRules = [];
+	Object.keys(styles).forEach(
+		mediaSpec => {
+			const rulesOfMedia = transformStylesToCssRules(styles[mediaSpec]);
+			cssRules.push(mediaSpec + " { ." + rulesOfMedia.join(".") + "}");			
+		}
+	);
+	return cssRules;
+};
+
+let styleSheetId = "";
 
 export const cx = (...classNames) => (classNames.join(" "));
 
@@ -51,7 +62,7 @@ export const changeCssProperty = (
 	className,
 	cssProperties
 ) => {
-	// Must Use Optional Chaining
+	// Must Do Some Checking
 	const styleSheet = Array.from(document.styleSheets).find(
 		s => s.ownerNode.id === styleSheetId
 	);
@@ -67,21 +78,37 @@ export const changeCssProperty = (
 			}
 		}
 	);
-
 };
 
-export default styles => WrappedComponent => {
+export const changeCssPropertyWithEvent = (
+	className,
+	e,
+	cssProperties
+) => {
+	changeCssProperty(className + ":" + e, cssProperties);
+};
+
+export default (
+	styles = {},
+	mediaStyles = {},
+) => (
+	WrappedComponent,
+	styleId = "emui-style-id-" + Math.floor(Math.random().toFixed(5) * 10000),
+) => {
 	console.log("Getting Style Sheets");
 	console.log(document.styleSheets);
-	if (!document.getElementById(styleSheetId)) {
+	console.log("styleId is ", styleId);
+	if (!document.getElementById(styleId)) {
 		const element = document.createElement("style");
-		element.id = styleSheetId;
-		element.type = 'text/css';
-		document.head.appendChild(element);
+		element.id = styleId;
+		document.head.insertBefore(element, document.head.firstElementChild);
 		const cssRules = transformStylesToCssRules(styles);
-		element.appendChild(document.createTextNode("." + cssRules.join(" .")));
+		const mediaCssRules = transformMediaStylesToCssRules(mediaStyles);
+		element.appendChild(document.createTextNode(
+			"." + cssRules.join(" .") + " " + mediaCssRules.join(" "),
+		));
 		console.log(document.styleSheets);
-
+		styleSheetId = styleId;
 	}
 	return WrappedComponent;
 };
